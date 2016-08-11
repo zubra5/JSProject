@@ -1,0 +1,57 @@
+body, html{
+	height:100%;
+}
+
+.inner-addon { 
+    position: relative;   
+}
+
+
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+.container-fluid{
+	padding-top:20px;
+	padding-bottom:20px;
+	height:100%;
+}
+.fill{   
+    height:100%;
+    min-height:100%;   
+    padding:10px;    
+}
+.results{
+	border-left:gray 1px solid;
+	padding-left:20px;
+}
+#content{
+	padding-top:20px;
+}
+.img-img{
+	border:gray 1px solid;
+	width:200px;
+   
+}
+.remove-icon .glyphicon-remove
+{
+    position:relative;
+    top:20px;
+    right:35px;
+    text-align:right;
+    display:block;
+    cursor:pointer;	
+}
+.desc-img{
+	    word-wrap: break-word;
+}
