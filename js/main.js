@@ -1,6 +1,7 @@
 $(document).ready(function () {
 var keyAppication="JSProject #";
-uploadOldResults();
+loadOldResults();
+//parse json data recieved from google api
 function parseResults(data){
 	
 	$.each(data.items, function(i, item){
@@ -31,6 +32,7 @@ function errorResult(){
 	console.log('Error load search results');
 }
 
+//call google search api use searctype=images
 function loadSearchResults(keyword){
 	var api_key='AIzaSyDhqh_KqKvYa4RBtx91trAlq1dEsi0IjTo';
 	var cx='016207691750960459060:louir-l4vgk';
@@ -47,12 +49,14 @@ function loadSearchResults(keyword){
 	});
 }
 
+//catch key up event
 $("#txt-search-go").keyup(function (e) {
     if (e.keyCode == 13) {	
         loadSearchResults($(this).val());
     }
 });
 
+//save all find and rest images into Local strorage
 $("#btnSaveResults").click(function(){		
 	var arr=[];
 	var cntImg=0;
@@ -73,6 +77,7 @@ $("#btnSaveResults").click(function(){
 	
 });
 
+//create dom-element for retrieve saved results from LocalStorage
 function createDivSave(nameSearch,cntImg){
 	var divSave=$("#template-save").find(".search-result-row").clone();
 	divSave.find("span").html(cntImg+" images");		
@@ -103,8 +108,8 @@ function createDivSave(nameSearch,cntImg){
 	});
 	divSave.appendTo($("#results_saved") );	
 }
-
-function uploadOldResults(){
+//load saved results from LocalStorage when user updates page
+function loadOldResults(){
 	for (var i=0, iC=localStorage.length; i<iC; ++i) { 
     		var storageKey = localStorage.key(i);		
 		if(storageKey.indexOf(keyAppication)>-1){
