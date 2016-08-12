@@ -10,3 +10,4 @@ User can save search results into LocalStorage
 
 When user reloads page, then all saved search results retrieve from LocalStorage and put into Saved search navigation bar
 
+User can delete or download image
