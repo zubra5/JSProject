@@ -1,6 +1,6 @@
 var keyAppication="JSProject #";
 
-function saveSearchResults(loadResults){		
+function saveSearchResults(){		
 	var arr=[];
 	var cntImg=0;
 	var cntDivSave=$("#results_saved").find(".search-result-row").length;
@@ -13,7 +13,7 @@ function saveSearchResults(loadResults){
 	var nameSearch= $("#txt-search-go").val()+'#'+cntDivSave;
 	localStorage.setItem(keyAppication+nameSearch,JSON.stringify({"data":arr}));
 
-	createDivSave(nameSearch,cntImg,loadResults);
+	createDivSave(nameSearch,cntImg);
 
 	$("#images").html("");
 	$("#txt-search-go").val("");
@@ -21,7 +21,8 @@ function saveSearchResults(loadResults){
 }
 
 //create dom-element for retrieve saved results from LocalStorage
-function createDivSave(nameSearch,cntImg,loadResults){
+function createDivSave(nameSearch,cntImg){
+	
 	var divSave=$("#template-save").find(".search-result-row").clone();
 	divSave.find("span").html(cntImg+" images");		
 			

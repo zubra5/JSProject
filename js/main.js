@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 	//save all find and rest images into Local strorage
 	$("#btnSaveResults").click(function(){		
-		saveObj.saveResults(retrieveObj.loadSavedResult)
+		saveObj.saveResults()
 		}
 	);
 	
