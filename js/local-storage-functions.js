@@ -1,10 +1,14 @@
 var LocalStorage = function (keyApp) {
     this.keyAppication = keyApp;
     this.template = null;
+    this.cntSearch = 0;
 }
-LocalStorage.prototype.saveSearchResults = function (arr, nameSearch) {
-    localStorage.setItem(this.keyAppication + ' ' + nameSearch, JSON.stringify({ "data": arr }));
-
+LocalStorage.prototype.saveSearchResults = function (arr, keyWord) {
+    this.cntSearch++;
+    var title =  keyWord + '#' + this.cntSearch;
+    var key = this.keyAppication + ' ' + title;
+    localStorage.setItem(key, JSON.stringify({ "data": arr }));
+    return title;
 }
 LocalStorage.prototype.retrieveResults = function (nameSearch) {
     var arr = JSON.parse(localStorage.getItem(this.keyAppication + ' ' + nameSearch))
@@ -13,7 +17,8 @@ LocalStorage.prototype.retrieveResults = function (nameSearch) {
 
 
 LocalStorage.prototype.loadOldResults = function () {
-    //load saved results from LocalStorage when user updates page		
+    //load saved results from LocalStorage when user updates page	
+    this.cntSearch = localStorage.length;
     for (var i = 0, iC = localStorage.length; i < iC; ++i) {
         var storageKey = localStorage.key(i);
         if (storageKey.indexOf(this.keyAppication) > -1) {

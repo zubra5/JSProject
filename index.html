@@ -1,66 +1,57 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>JSProject</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="js/google-search-api-functions.js"></script>
-  <script src="js/local-storage-functions.js"></script> 
-  <script src="js/template-engine.js"></script> 	
-  <script src="js/main.js"></script>
+    <title>JSProject</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/google-search-api-functions.js"></script>
+    <script src="js/local-storage-functions.js"></script>
+    <script src="js/template-engine.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-
-<div class="container-fluid" >
-	
-  <div class="col-xs-9 fill">
-	<div >
-		<div class="inner-addon left-addon">
-    		<i class="glyphicon glyphicon-search"></i>
-    		<input type="text" class="form-control" id="txt-search-go" />
-		</div>
-	</div>
-	<div id="content" class="text">
-	<div id="images" class="text-center">
-		
-		
-
-	</div>
-	</div>
-	<div class="navbar navbar-fixed-bottom">
-		<p class="col-xs-9 text-center">
-			<button class="btn" id="btnSaveResults">Save search results</button>
-		</p>
-	</div>
-	<div id="template" class="hidden">
-		<div class="wrapper-image text-center col-xs-4">
-			<div class="remove-icon">
-			<span class="glyphicon glyphicon-remove text-right"></span>			
-			<img src=""  class="img-img" >
-			</div>
-                         <div><a href="" target="_blank" class="desc-img">
-				
-			</a></div>
-		</div>
-	</div>
-  </div>
-  <div class="col-xs-3 results fill">
-	<div id="results_saved">
-		
-	</div>
-	<div id="template-save" class="hidden">
-		<div class="search-result-row">	
-			<a href="#" class="a-keyword-search"></a> 
-			<span class="count-images"> </span>
-		</div>
-	</div>
-  </div>
-
-</div>
-
+    <div class="container-fluid">
+        <div class="col-xs-9 fill">
+            <div>
+                <div class="inner-addon left-addon">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input type="text" class="form-control" id="txt-search-go" />
+                </div>
+            </div>
+            <div id="content" class="text">
+                <div id="images" class="text-center">
+                </div>
+            </div>
+            <div class="navbar navbar-fixed-bottom">
+                <p class="col-xs-9 text-center">
+                    <button class="btn" id="btnSaveResults">Save search results</button>
+                </p>
+            </div>
+            <div id="template" class="hidden">
+                <div class="wrapper-image text-center col-xs-4">
+                    <div class="remove-icon">
+                        <span class="glyphicon glyphicon-remove text-right"></span>
+                        <img src="" class="img-img">
+                    </div>
+                    <div>
+                        <a href="" target="_blank" class="desc-img"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 results fill">
+            <div id="results_saved"></div>
+            <div id="template-save" class="hidden">
+                <div class="search-result-row">
+                    <a href="#" class="a-keyword-search"></a>
+                    <span class="count-images"> </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

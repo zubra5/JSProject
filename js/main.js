@@ -22,10 +22,9 @@ $(document).ready(function () {
 
 	//save all find and rest images into Local strorage
 	$("#btnSaveResults").click(function(){
-		var arr=templateObj.getArrayImages();			
-		var nameSearch = templateObj.getNameSearch(arr.length);
-		saveObj.saveSearchResults(arr, nameSearch);
-		templateObj.createDivSave(nameSearch,arr.length);
+	    var arr = templateObj.getArrayImages();       
+	    var title=saveObj.saveSearchResults(arr, templateObj.getKeyWord());
+	    templateObj.createDivSave(title, arr.length);
 		templateObj.clearImages();
 		templateObj.clearKeyWord();		
 	});
