@@ -13,8 +13,8 @@ When user reloads page, then all saved search results retrieve from LocalStorage
 User can delete or download image
 
 Technologies:
-1. HTML
-2. Javascript
-3. Jquery
-4. CSS
-5. Bootstrap
+- HTML
+- Javascript
+- Jquery
+- CSS
+- Bootstrap
